@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    
+}
+html{
+    scroll-behavior:smooth;
+}
+.home{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+    color: beige;
+    padding: 10px;
+}
+.heading{
+    font-size: 25px;
+    display: inline-block;
+}
+.home > .logo{
+    font-size: 30px;
+}
+.home{
+    position: fixed;
+}
+.nav ul li{
+    text-decoration: none;
+    list-style: none;
+    padding: 1px;
+    padding-top: 10px;
+    margin: 8px;
+    font-size: 15px;
+    display: inline-block;
+}
+.nav ul li a{
+    color: beige;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    color: beige;
+    border-bottom: 1px solid beige;
+}
+.active {
+    color: beige;
+    border-bottom: solid 1px beige;
+}
+.header{
+    min-height: 600px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),url("home.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.about-container .about-description {
+    max-width: 900px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+.portfolio-grid {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+  }
+  
+  .portfolio-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-card > img{
+    width: 100%;
+    height: 400px;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  .portfolio-card:hover .content{
+    opacity: 1;
+  }
+  .btn{
+    padding: 10px;
+    color: white;
+    background-color: #171717;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: #525252;
+  }
+  .portfolio-card::after{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    font-size: 30px;
+  }
+  .portfolio-card:nth-child(1)::after{
+    content: 'Portraits';
+  }
+  .portfolio-card:nth-child(2)::after{
+    content: 'Weddings';
+  }
+  .portfolio-card:nth-child(3)::after{
+    content: 'Nature';
+  }
+  .services{
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0, 0, 0, 0.9)),url("service.jpg");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+    width: 100%;
+    object-fit: fill;
+  }
+  .service-container .section-header{
+    color: white;
+    font-size: 2rem;
+  }
+  .section-container .service-description{
+    max-width: 600px;
+    color: #a3a3a3;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .service-grid{
+    display: grid;
+    color: #a3a3a3;
+    gap: 30px;
+    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-card{
+    text-align: center;
+  }
+  .service-card h4{
+    color: white;
+    font-size: 2rem;
+  }
+  .service-card h4::after{
+    position: absolute;
+    content: "~";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+  }
+  .blog{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)),url("blog-1.jpg");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .blog-content{
+    text-align: center;
+  }
+  .blog-content h2{
+    color: white;
+    margin-bottom: 2rem;
+  }
+  .blog-content h4{
+    margin-bottom: 1rem;
+    color: white;
+  }
+  .blog-content p{
+    margin-bottom: 2rem;
+    color: #a3a3a3;
+    line-height: 2rem;
+  }
+  .blg-btn button{
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  .blg-btn button:hover{
+    background-color: white;
+    color: #171717;
+    border: black solid 1px;
+  }
+  .blog-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .blog-content{
+    grid-column: 2/3;
+  }
+  .footer__container {
+    display: grid;
+    gap: 4rem 0;
+    align-items: center;
+  }
+  
+  .footer__col {
+    padding-inline: 2rem;
+  }
+  
+  .footer__container img {
+    max-width: 170px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer__socials a {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+  }
+  
+  .footer__socials a:hover {
+    color: var(--text-light);
+  }
+  
+  .footer__links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer__links a {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .footer__links a:hover {
+    color: var(--text-light);
+  }
+  
+  .footer__col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+  }
+  
+  .footer__col p {
+    color: var(--text-light);
+    line-height: 1.75rem;
+    text-align: center;
+  }
+  
+  .footer__bar {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--extra-light);
+    background-color: var(--text-dark);
+    text-align: center;
+    background-color: #171717;
+    color: white;
+  }
+  .footer__container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__col:nth-child(1) {
+    grid-area: 1/2/2/3;
+    border-left: 2px solid var(--text-dark);
+    border-right: 2px solid var(--text-dark);
+  }
+
+  .footer__col:nth-child(3) {
+    border-left: 2px solid var(--text-dark);
+  }
